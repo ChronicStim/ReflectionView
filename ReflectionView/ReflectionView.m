@@ -92,7 +92,7 @@
         [CATransaction setDisableActions:YES]; // don't animate
         CGFloat total = layer.bounds.size.height * 2.0f + _reflectionGap;
         CGFloat halfWay = (layer.bounds.size.height + _reflectionGap) / total - 0.01f;
-        _gradientLayer.frame = CGRectMake(0.0f, 0.0f, self.bounds.size.width, total);
+        _gradientLayer.frame = CGRectIntegral(CGRectMake(0.0f, 0.0f, self.bounds.size.width, total));
         _gradientLayer.locations = [NSArray arrayWithObjects:
                                     [NSNumber numberWithFloat:0.0f],
                                     [NSNumber numberWithFloat:halfWay],
@@ -160,7 +160,7 @@
         
         //update reflection
         _reflectionView.alpha = _reflectionAlpha;
-        _reflectionView.frame = CGRectMake(0, self.bounds.size.height + _reflectionGap, size.width, size.height);
+        _reflectionView.frame = CGRectIntegral(CGRectMake(0, self.bounds.size.height + _reflectionGap, size.width, size.height));
     }
 }
 
