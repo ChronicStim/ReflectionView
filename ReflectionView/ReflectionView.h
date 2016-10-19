@@ -73,5 +73,6 @@
 @property (nonatomic, assign) BOOL dynamic;
 
 - (void)update;
+-(void)removeReflection;
 
 @end

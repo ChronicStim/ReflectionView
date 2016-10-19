@@ -229,4 +229,12 @@
     [super ah_dealloc];
 }
 
+-(void)removeReflection;
+{
+    if (_reflectionView) {
+        _reflectionView.image = nil;
+        [_reflectionView removeFromSuperview];
+    }
+}
+
 @end
